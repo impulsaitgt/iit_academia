@@ -37,6 +37,8 @@
                             <field name="estatura"/>
                             <field name="fecha_nacimiento" placeholder="Fecha Nacimiento"/>
                             <field name="peso" placeholder="Peso"/>
+                            <field name="email" placeholder="Email"/>
+                            <field name="telefono" placeholder="Telefono"/>
                         </group>
                         <group>
                             <field name="anio_nacimiento" placeholder="Año Nacimiento"/>
@@ -76,6 +78,8 @@
                 <field name="cui"/>
                 <field name="peso"/>
                 <field name="talla"/>
+                <field name="email"/>
+                <field name="telefono"/>
                 <field name="estatura"/>
                 <field name="responsable_id"/>
                 <field name="padre_o_madre_id"/>

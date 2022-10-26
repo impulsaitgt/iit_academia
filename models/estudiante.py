@@ -19,6 +19,8 @@ class Estudiante(models.Model):
     padre_o_madre_id = fields.Many2one(comodel_name='res.partner', string="Padre/Madre")
     quien_paga = fields.Selection([('0','Responsable'),('1','Padre/Madre')], string="Responsable de Pago", default='0', required=True, tracking=True)
     foto = fields.Binary(string="Foto")
+    email = fields.Char(string='E-mail')
+    telefono = fields.Char(string='Telefono')
 
     _sql_constraints = [
         ('codigo_unico', 'unique(codigo)', "Ese codigo ya existe revisa la secuencia")
