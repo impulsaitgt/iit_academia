@@ -39,9 +39,11 @@
                             <field name="peso" placeholder="Peso"/>
                         </group>
                         <group>
-                            <field name="responsable_id" placeholder="Responsable"/>
                             <field name="anio_nacimiento" placeholder="Año Nacimiento"/>
                             <field name="codigo"/>
+                            <field name="responsable_id" placeholder="Responsable"/>
+                            <field name="padre_o_madre_id" placeholder="Padre/Madre"/>
+                            <field name="quien_paga" placeholder="Responsable de Pago"/>
                             <field name="status_contratos" widget="badge"
                                    decoration-danger="status_contratos == 'Inactivo'"
                                    decoration-success="status_contratos == 'Activo'"
@@ -76,6 +78,8 @@
                 <field name="talla"/>
                 <field name="estatura"/>
                 <field name="responsable_id"/>
+                <field name="padre_o_madre_id"/>
+                <field name="quien_paga"/>
                 <field name="status_contratos" widget="badge" decoration-danger="status_contratos == 'Inactivo'"
                        decoration-success="status_contratos == 'Activo'"
                        decoration-muted="status_contratos == 'Nuevo'"/>
