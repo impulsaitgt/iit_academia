@@ -15,7 +15,9 @@ class Estudiante(models.Model):
     talla = fields.Selection([ ('8','8'),('10','10'),('12','12'),('14','14'),('S','Small'),('M','Medium'),('L2','Large'),('XL','Extra Large')],string="Talla de Uniforme", default='8', required=True, tracking=True)
     peso = fields.Float(string="Peso en libras", required=True, tracking=True)
     anio_nacimiento = fields.Integer(string="Año de nacimiento", compute="_calcula_anio_", readonly=True)
-    responsable_id = fields.Many2one(comodel_name='res.partner')
+    responsable_id = fields.Many2one(comodel_name='res.partner', string="Responsable")
+    padre_o_madre_id = fields.Many2one(comodel_name='res.partner', string="Padre/Madre")
+    quien_paga = fields.Selection([('0','Responsable'),('1','Padre/Madre')], string="Responsable de Pago", default='0', required=True, tracking=True)
     foto = fields.Binary(string="Foto")
 
     _sql_constraints = [
